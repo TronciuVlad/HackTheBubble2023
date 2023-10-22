@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import logo from '../logo.png';
 
-function Header({ user, onLoginClick }) {
+function Header({ user, changeAddListing, onLoginClick }) {
   const [guestEmail, setGuestEmail] = useState('');
   const [displayEmail, setDisplayEmail] = useState('');
   const [isGuestDialogOpen, setGuestDialogOpen] = useState(false);
@@ -28,7 +28,10 @@ function Header({ user, onLoginClick }) {
       ) : (
         <Fragment>
           {guestEmail ? (
-            <p className="header-el">Guest: {guestEmail}</p>
+            <div>
+              <p className="header-el">Guest: {guestEmail}</p>
+              <button className ="header-el" onClick={changeAddListing}>Add listing</button>
+            </div>
           ) : (
             <Fragment>
               <button className="header-el" onClick={onLoginClick}>Login</button>

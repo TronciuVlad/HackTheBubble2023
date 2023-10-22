@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Header from './components/Header';
 import LeftComponent from './components/LeftComponent';
 import RightComponent from './components/RightComponent';
 import Footer from './components/Footer';
+import AddListingForm from './components/AddListingForm';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [trades, setTrades] = useState([]);
-  const [selectedTrade, setSelectedTrade] = useState(null);
+  const [items, setItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isAddingListing, setAddingListing] = useState(false);
 
   useEffect(() => {
     // Fetch the list of trades from your Express.js backend
-    fetch('http://localhost:3001/api/trades') // Update with your backend URL
+    fetch('http://localhost:3001/api/trades')
       .then((response) => response.json())
-      .then((data) => setTrades(data))
+      .then((data) => setItems(data))
       .catch((error) => console.error('Error fetching trades: ', error));
   }, []);
 
@@ -22,24 +24,48 @@ function App() {
     // Set the user state upon successful login
   };
 
-  // const handleItemClick = (itemId) => {
-  //   // Simulate fetching more information about the selected item
-  //   fetch(`/api/items/${itemId}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setSelectedItem(data));
-  // };
-
-  const handleTradeClick = (trade) => {
-    // Implement code to display more information about the selected trade
-    setSelectedTrade(trade);
+  const handleItemClick = (itemId) => {
+    // Simulate fetching more information about the selected item
+    fetch(`/api/trades/${itemId}`)
+      .then((response) => response.json())
+      .then((data) => setSelectedItem(data));
   };
+
+  const handleAddListing = (newTrade) => {
+    // Send the new trade to the backend for addition
+    fetch('http://localhost:3001/api/trades', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newTrade),
+    })
+      .then(() => {
+        setAddingListing(false);
+        // Fetch the updated list of trades
+        return fetch('http://localhost:3001/api/trades');
+      })
+      .then((response) => response.json())
+      .then((data) => setItems(data))
+      .catch((error) => console.error('Error adding trade: ', error));
+  };
+
+  const changeAddListing = (value) => {
+    setAddingListing(true);
+  }
 
   return (
     <div className="app">
-      <Header user={user} onLoginClick={handleLoginClick} />
+      <Header user={user} changeAddListing={changeAddListing.bind(this)} onLoginClick={handleLoginClick} />
       <div className="main-content">
-        <LeftComponent items={trades} onItemClick={handleTradeClick} />
-        <RightComponent selectedItem={selectedTrade} />
+        {isAddingListing ? (
+          <AddListingForm onAddListing={handleAddListing} />
+        ) : (
+          <Fragment>
+            <LeftComponent items={items} onItemClick={handleItemClick} />
+            <RightComponent selectedItem={selectedItem} />
+          </Fragment>
+        )}
       </div>
       <Footer />
     </div>
