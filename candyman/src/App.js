@@ -7,6 +7,7 @@ import AddListingForm from './components/AddListingForm';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [guestEmail, setGuestEmail] = useState('');
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [isAddingListing, setAddingListing] = useState(false);
@@ -24,9 +25,13 @@ function App() {
     // Set the user state upon successful login
   };
 
+  const changeGuestEmail = (email) => {
+    setGuestEmail(email);
+  }
+
   const handleItemClick = (itemId) => {
-    // Simulate fetching more information about the selected item
-    fetch(`/api/trades/${itemId}`)
+    // Send a GET request to the server to fetch more information about the selected item
+    fetch(`http://localhost:3001/api/trades/${itemId}`)
       .then((response) => response.json())
       .then((data) => setSelectedItem(data));
   };
