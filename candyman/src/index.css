@@ -1,0 +1,101 @@
+/* Add your styles here */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root, .app{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.main-content{
+  height: 83%;
+}
+
+header {
+  background-color: #9c0cbc;
+  color: #fff;
+  height: 12%;
+  padding: 5px;
+}
+
+.header-el {
+  display:inline;
+  margin: 10px;
+}
+
+h1.header-el {
+  float: left;
+  margin: 20px 10px 20px 10px;
+}
+
+button.header-el {
+  float: right;
+  margin: 25px 50px;
+}
+
+img.header-el {
+  float: left;
+  height: 50px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #53acff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.left-component {
+  float: left;
+  width: 60%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  height: 100%;
+  color: #fff;
+}
+
+.left-component ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-component li {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.right-component {
+  float: left;
+  width: 40%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #fff;
+  height: 100%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  height: 5%;
+  padding: 10px;
+}
+
+
