@@ -24,7 +24,7 @@ header {
   background-color: #9c0cbc;
   color: #fff;
   height: 12%;
-  padding: 5px;
+  padding: 5px 20px 5px 20px;
 }
 
 .header-el {
@@ -39,12 +39,23 @@ h1.header-el {
 
 button.header-el {
   float: right;
-  margin: 25px 50px;
+  margin: 25px 5px;
+}
+
+input.header-el {
+  float: right;
+  margin: 25px 5px;
 }
 
 img.header-el {
   float: left;
   height: 50px;
+}
+
+p.header-el {
+  float: right;
+  height: 50px;
+  margin: 25px 0 0 0;
 }
 
 header h1 {
@@ -74,6 +85,22 @@ button {
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .left-component ul {
   list-style: none;
   padding: 0;
@@ -82,6 +109,11 @@ button {
 .left-component li {
   cursor: pointer;
   margin-bottom: 10px;
+  border-radius: 25px;
+  background: #ff8f00;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
 }
 
 .right-component {

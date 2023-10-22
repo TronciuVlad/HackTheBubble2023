@@ -6,10 +6,8 @@ function LeftComponent({ items, onItemClick }) {
     <div className="left-component">
       <ul>
         {items.map((trade) => (
-          <li key={trade.id} onClick={() => onItemClick(trade)}>
-            <p>
+          <li key={trade.id} className="trade-item" onClick={() => onItemClick(trade)}>
               {trade.qty_to_give} {trade.item_to_give} for {trade.qty_to_get} {trade.item_to_get}
-            </p>
           </li>
         ))}
       </ul>
