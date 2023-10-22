@@ -66,6 +66,12 @@ header p {
   margin: 10px 0;
 }
 
+form {
+  height: 100%;
+  background-color:#1e1e1e;
+  color: white;
+}
+
 button {
   background-color: #53acff;
   color: #fff;

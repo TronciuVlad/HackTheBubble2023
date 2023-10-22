@@ -29,14 +29,22 @@ function App() {
     setGuestEmail(email);
   }
 
-  const handleItemClick = (itemId) => {
+  const getGuestEmail = () => {
+    return guestEmail;
+  }
+
+  const handleItemClick = (item) => {
     // Send a GET request to the server to fetch more information about the selected item
+    let itemId = item.id
     fetch(`http://localhost:3001/api/trades/${itemId}`)
       .then((response) => response.json())
       .then((data) => setSelectedItem(data));
   };
 
   const handleAddListing = (newTrade) => {
+    // Add the guestEmail to the user_id field
+    newTrade.user_id = guestEmail;
+  
     // Send the new trade to the backend for addition
     fetch('http://localhost:3001/api/trades', {
       method: 'POST',
@@ -54,6 +62,7 @@ function App() {
       .then((data) => setItems(data))
       .catch((error) => console.error('Error adding trade: ', error));
   };
+  
 
   const changeAddListing = (value) => {
     setAddingListing(true);
@@ -61,7 +70,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header user={user} changeAddListing={changeAddListing.bind(this)} onLoginClick={handleLoginClick} />
+      <Header user={user} changeGuestEmail={changeGuestEmail.bind(this)} getGuestEmail={getGuestEmail.bind(this)} changeAddListing={changeAddListing.bind(this)} onLoginClick={handleLoginClick} />
       <div className="main-content">
         {isAddingListing ? (
           <AddListingForm onAddListing={handleAddListing} />

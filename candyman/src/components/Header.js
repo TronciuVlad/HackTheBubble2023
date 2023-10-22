@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import logo from '../logo.png';
 
-function Header({ user, changeAddListing, onLoginClick }) {
+function Header({ user, changeGuestEmail, getGuestEmail, changeAddListing, onLoginClick }) {
   const [guestEmail, setGuestEmail] = useState('');
   const [displayEmail, setDisplayEmail] = useState('');
   const [isGuestDialogOpen, setGuestDialogOpen] = useState(false);
@@ -16,6 +16,7 @@ function Header({ user, changeAddListing, onLoginClick }) {
 
   const handleGuestSubmit = (event) => {
     setGuestEmail(displayEmail);
+    changeGuestEmail(displayEmail);
     setGuestDialogOpen(false);
   };
 

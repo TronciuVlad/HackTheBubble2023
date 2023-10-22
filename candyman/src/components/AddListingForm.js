@@ -30,6 +30,7 @@ function AddListingForm({ onAddListing }) {
           onChange={handleInputChange}
         />
       </label>
+      <br></br>
       <label>
         Item to Give:
         <input
@@ -39,6 +40,7 @@ function AddListingForm({ onAddListing }) {
           onChange={handleInputChange}
         />
       </label>
+      <br></br>
       <label>
         Quantity to Get:
         <input
@@ -48,6 +50,7 @@ function AddListingForm({ onAddListing }) {
           onChange={handleInputChange}
         />
       </label>
+      <br></br>
       <label>
         Item to Get:
         <input
@@ -57,6 +60,7 @@ function AddListingForm({ onAddListing }) {
           onChange={handleInputChange}
         />
       </label>
+      <br></br>
       <button type="submit">Add Listing</button>
     </form>
   );
