@@ -1,0 +1,223 @@
+[
+    {
+      "id": 1,
+      "user_id": "1",
+      "guest_user": false,
+      "qty_to_give": 5,
+      "item_to_give": "Item A",
+      "id_item_to_give": 1,
+      "qty_to_get": 3,
+      "item_to_get": "Item B",
+      "id_item_to_get": 2
+    },
+    {
+      "id": 2,
+      "user_id": "2",
+      "guest_user": false,
+      "qty_to_give": 10,
+      "item_to_give": "Item C",
+      "id_item_to_give": 3,
+      "qty_to_get": 8,
+      "item_to_get": "Item D",
+      "id_item_to_get": 4
+    },
+    {
+        "id": 3,
+        "user_id": "3",
+        "guest_user": false,
+        "qty_to_give": 7,
+        "item_to_give": "Item E",
+        "id_item_to_give": 5,
+        "qty_to_get": 6,
+        "item_to_get": "Item F",
+        "id_item_to_get": 6
+    },
+    {
+        "id": 4,
+        "user_id": "4",
+        "guest_user": false,
+        "qty_to_give": 15,
+        "item_to_give": "Item G",
+        "id_item_to_give": 7,
+        "qty_to_get": 12,
+        "item_to_get": "Item H",
+        "id_item_to_get": 8
+    },
+    {
+        "id": 5,
+        "user_id": "dummy_email_1@example.com",
+        "guest_user": true,
+        "qty_to_give": 3,
+        "item_to_give": "Item I",
+        "id_item_to_give": 9,
+        "qty_to_get": 2,
+        "item_to_get": "Item J",
+        "id_item_to_get": 10
+    },
+    {
+        "id": 6,
+        "user_id": "5",
+        "guest_user": false,
+        "qty_to_give": 4,
+        "item_to_give": "Item K",
+        "id_item_to_give": 11,
+        "qty_to_get": 3,
+        "item_to_get": "Item L",
+        "id_item_to_get": 12
+    },
+    {
+        "id": 7,
+        "user_id": "6",
+        "guest_user": false,
+        "qty_to_give": 9,
+        "item_to_give": "Item M",
+        "id_item_to_give": 13,
+        "qty_to_get": 7,
+        "item_to_get": "Item N",
+        "id_item_to_get": 14
+    },
+    {
+        "id": 8,
+        "user_id": "dummy_email_2@example.com",
+        "guest_user": true,
+        "qty_to_give": 6,
+        "item_to_give": "Item O",
+        "id_item_to_give": 15,
+        "qty_to_get": 5,
+        "item_to_get": "Item P",
+        "id_item_to_get": 16
+    },
+    {
+        "id": 9,
+        "user_id": "7",
+        "guest_user": false,
+        "qty_to_give": 8,
+        "item_to_give": "Item Q",
+        "id_item_to_give": 17,
+        "qty_to_get": 6,
+        "item_to_get": "Item R",
+        "id_item_to_get": 18
+    },
+    {
+        "id": 10,
+        "user_id": "8",
+        "guest_user": false,
+        "qty_to_give": 12,
+        "item_to_give": "Item S",
+        "id_item_to_give": 19,
+        "qty_to_get": 10,
+        "item_to_get": "Item T",
+        "id_item_to_get": 20
+    },
+    {
+        "id": 11,
+        "user_id": "dummy_email_3@example.com",
+        "guest_user": true,
+        "qty_to_give": 5,
+        "item_to_give": "Item U",
+        "id_item_to_give": 21,
+        "qty_to_get": 4,
+        "item_to_get": "Item V",
+        "id_item_to_get": 22
+    },
+    {
+        "id": 12,
+        "user_id": "9",
+        "guest_user": false,
+        "qty_to_give": 2,
+        "item_to_give": "Item W",
+        "id_item_to_give": 23,
+        "qty_to_get": 1,
+        "item_to_get": "Item X",
+        "id_item_to_get": 24
+    },
+    {
+        "id": 13,
+        "user_id": "10",
+        "guest_user": false,
+        "qty_to_give": 7,
+        "item_to_give": "Item Y",
+        "id_item_to_give": 25,
+        "qty_to_get": 5,
+        "item_to_get": "Item Z",
+        "id_item_to_get": 26
+    },
+    {
+        "id": 14,
+        "user_id": "dummy_email_4@example.com",
+        "guest_user": true,
+        "qty_to_give": 3,
+        "item_to_give": "Item AA",
+        "id_item_to_give": 27,
+        "qty_to_get": 2,
+        "item_to_get": "Item BB",
+        "id_item_to_get": 28
+    },
+    {
+        "id": 15,
+        "user_id": "11",
+        "guest_user": false,
+        "qty_to_give": 6,
+        "item_to_give": "Item CC",
+        "id_item_to_give": 29,
+        "qty_to_get": 4,
+        "item_to_get": "Item DD",
+        "id_item_to_get": 30
+    },
+    {
+        "id": 16,
+        "user_id": "12",
+        "guest_user": false,
+        "qty_to_give": 9,
+        "item_to_give": "Item EE",
+        "id_item_to_give": 31,
+        "qty_to_get": 7,
+        "item_to_get": "Item FF",
+        "id_item_to_get": 32
+    },
+    {
+        "id": 17,
+        "user_id": "dummy_email_5@example.com",
+        "guest_user": true,
+        "qty_to_give": 8,
+        "item_to_give": "Item GG",
+        "id_item_to_give": 33,
+        "qty_to_get": 6,
+        "item_to_get": "Item HH",
+        "id_item_to_get": 34
+    },
+    {
+        "id": 18,
+        "user_id": "13",
+        "guest_user": false,
+        "qty_to_give": 4,
+        "item_to_give": "Item II",
+        "id_item_to_give": 35,
+        "qty_to_get": 3,
+        "item_to_get": "Item JJ",
+        "id_item_to_get": 36
+    },
+    {
+        "id": 19,
+        "user_id": "14",
+        "guest_user": false,
+        "qty_to_give": 10,
+        "item_to_give": "Item KK",
+        "id_item_to_give": 37,
+        "qty_to_get": 8,
+        "item_to_get": "Item LL",
+        "id_item_to_get": 38
+    },
+    {
+        "id": 20,
+        "user_id": "dummy_email_6@example.com",
+        "guest_user": true,
+        "qty_to_give": 5,
+        "item_to_give": "Item MM",
+        "id_item_to_give": 39,
+        "qty_to_get": 4,
+        "item_to_get": "Item NN",
+        "id_item_to_get": 40
+    }
+]
+  
